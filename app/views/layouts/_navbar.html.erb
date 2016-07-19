@@ -1,0 +1,30 @@
+<nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <%= link_to "PET REGISTRY", animals_path, class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+      <% if user_signed_in? %>
+        <li><%= link_to "All Animals", animals_path %></li>
+        <li><%= link_to "New Animal", new_animal_path %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <p class="nav navbar-text" id="current-user" data-id="<%= current_user.id %>">Logged in as <%= current_user.email %></p>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <% else %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</nav>

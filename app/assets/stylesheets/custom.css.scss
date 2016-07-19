@@ -1,0 +1,55 @@
+body { 
+  padding-top: 60px;
+  font-family: Georgia, Verdana, Helvetica, Arial, sans-serif;
+}
+
+.navbar-custom {
+  background-color: #4ABDAC;
+  color: #fff;
+}
+
+.navbar-custom .navbar-brand {
+  color: #fff;
+  font-family: 'Helvetica Neue', Verdana, Arial, sans-serif;
+}
+
+.navbar-nav a {
+  color: #fff
+}
+
+.navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+  background-color: #FC4A1A;
+}
+
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: black;
+}
+
+/*flash*/
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}

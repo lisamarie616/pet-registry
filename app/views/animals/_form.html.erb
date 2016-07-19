@@ -1,0 +1,10 @@
+<%= form_for @animal do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :type %>
+  <%= f.text_field :animal_type %>
+  <%= f.label :sex %>
+  <%= f.text_field :sex %>
+  <%= f.file_field :avatar %>
+  <%= f.submit %>
+<% end %>
