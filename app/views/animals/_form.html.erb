@@ -1,10 +1,10 @@
-<%= form_for @animal do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :type %>
-  <%= f.text_field :animal_type %>
-  <%= f.label :sex %>
-  <%= f.text_field :sex %>
-  <%= f.file_field :avatar %>
-  <%= f.submit %>
+<%= bootstrap_form_for @animal do |f| %>
+  <%= f.text_field :name, autofocus: true %>
+  <%= f.label "Type" %>
+  <%= f.text_field :animal_type, hide_label: true %>
+  <%= f.label "Gender" %>
+  <%= f.text_field :sex, hide_label: true %>
+  <%= f.label "Photo" %>
+  <%= f.file_field :avatar, hide_label: true %>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>
