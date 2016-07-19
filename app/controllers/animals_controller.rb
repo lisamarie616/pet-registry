@@ -22,20 +22,27 @@ class AnimalsController < ApplicationController
     if @animal.save
       flash[:success] = "Animal successfully added!"
       redirect_to animal_path(@animal)
+    else
+      render :new
     end
   end
 
   def update
     @animal = load_animal
+    authorize @animal
     if @animal.update(animal_params)
       flash[:success] = "Animal updated!"
       redirect_to animal_path(@animal)
+    else
+      render :edit
     end
   end
 
   def destroy
     @animal = load_animal
+    authorize @animal
     @animal.destroy
+    flash[:notice] = "Animal deleted from registry."
     redirect_to animals_path
   end
 

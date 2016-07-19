@@ -15,7 +15,7 @@
         <li><%= link_to "New Animal", new_animal_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <p class="nav navbar-text" id="current-user" data-id="<%= current_user.id %>">Logged in as <%= current_user.email %></p>
+        <p class="nav navbar-text" id="current-user" data-id="<%= current_user.id %>">Logged in as <%= current_user.username %></p>
         <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
       </ul>
       <% else %>
