@@ -18,8 +18,9 @@ class AnimalsController < ApplicationController
   end
 
   def create
-    @animal = Animal.new(animal_params)
+    @animal = current_user.animals.build(animal_params)
     if @animal.save
+      flash[:success] = "Animal successfully added!"
       redirect_to animal_path(@animal)
     end
   end
@@ -27,6 +28,7 @@ class AnimalsController < ApplicationController
   def update
     @animal = load_animal
     if @animal.update(animal_params)
+      flash[:success] = "Animal updated!"
       redirect_to animal_path(@animal)
     end
   end

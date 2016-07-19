@@ -5,4 +5,11 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
   validates :username, presence: true
+  has_many :animals
+  before_save :format_data
+
+  protected
+  def format_data
+    self.username = self.username.titlecase
+  end
 end

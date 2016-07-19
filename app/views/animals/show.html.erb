@@ -2,5 +2,6 @@
 <h1><%= @animal.name %></h1>
 <p>Type: <%= @animal.animal_type %></p>
 <p>Gender: <%= @animal.sex %></p>
+<p>Added By: <%= current_user.username %></p>
 <%= link_to "Edit", edit_animal_path(@animal) %>
 <%= link_to "Destroy", animal_path(@animal), method: :delete %>

@@ -7,6 +7,7 @@
           <%= link_to animal.name,  animal_path(animal)%><br>
           Type: <%= animal.animal_type %><br>
           Gender: <%= animal.sex %><br>
+          Added By: <%= current_user.username %>
         </p>
       </div>
     </div>
