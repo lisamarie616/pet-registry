@@ -1,0 +1,17 @@
+<div id="filterrific_results">
+  <div class="row">
+    <% animals.each do |animal| %>
+      <div class="col-md-2 col-sm-3 col-xs-6">
+        <div class="thumbnail">
+          <%= image_tag animal.avatar.url(:thumb) %>
+          <p>
+            <%= link_to animal.name,  animal_path(animal)%><br>
+            Type: <%= animal.animal_type %><br>
+            Gender: <%= animal.sex %><br>
+            Added By: <%= animal.user.username %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

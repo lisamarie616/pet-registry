@@ -6,6 +6,18 @@ class Animal < ActiveRecord::Base
   validates :name, :animal_type, :sex, presence: true
   before_save :format_data
 
+  scope :with_animal_type, lambda {|animal_types| where(animal_type: [*animal_types])}
+
+  filterrific(
+    available_filters: [
+      :with_animal_type
+    ]
+  )
+
+  def self.options_for_select
+    order('LOWER(animal_type)').map {|e| e.animal_type}.uniq
+  end
+
   protected
   def format_data
     self.name = self.name.titlecase

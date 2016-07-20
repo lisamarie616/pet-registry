@@ -1,0 +1,4 @@
+<% js = escape_javascript(
+  render(partial: 'animals/list', locals: { animals: @animals })
+) %>
+$("#filterrific_results").html("<%= js %>");

@@ -2,7 +2,20 @@ class AnimalsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @animals = Animal.all
+    @filterrific = initialize_filterrific(
+      Animal,
+      params[:filterrific],
+      select_options: {
+        with_animal_type: Animal.options_for_select
+      },
+      persistence_id: false,
+    ) or return
+    @animals = @filterrific.find
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show
