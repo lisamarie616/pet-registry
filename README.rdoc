@@ -1,28 +1,29 @@
-== README
+# Pet Registry
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Directory of pets powered by Rails!
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+* Devise for authentication
+* Pundit for authorization
+* Paperclip for file uploads
+* Bootstrap for styling
+* Filterrific for filtering
 
-* System dependencies
+## Usage
 
-* Configuration
+1. Fork and clone this repository.
 
-* Database creation
+2. `bundle install`
 
-* Database initialization
+3. `rake db:migrate`
 
-* How to run the test suite
+4. `rake db:seed`
 
-* Services (job queues, cache servers, search engines, etc.)
+5. `rails s` to start the server
 
-* Deployment instructions
+3. Navigate to `http://localhost:3000/`.
 
-* ...
+## Contributing
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Fork and clone; make changes; send pull requests.
