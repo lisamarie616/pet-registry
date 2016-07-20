@@ -1,9 +1,9 @@
 <%= image_tag @animal.avatar.url(:medium) %>
 <h1><%= @animal.name %></h1>
-<p>Type: <%= @animal.animal_type %></p>
-<p>Gender: <%= @animal.sex %></p>
-<p>Added By: <%= @animal.user.username %></p>
+<h3>Type: <%= @animal.animal_type %></h3>
+<h3>Gender: <%= @animal.sex %></h3>
+<h3>Added By: <%= @animal.user.username %></h3>
 <% if current_user == @animal.user %>
-  <%= link_to "Edit", edit_animal_path(@animal), class: "btn btn-sm btn-default" %>
-  <%= link_to "Destroy", animal_path(@animal), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-default" %>
+  <%= link_to "Edit", edit_animal_path(@animal), class: "btn btn-sm btn-primary" %>
+  <%= link_to "Destroy", animal_path(@animal), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-primary" %>
 <% end %>

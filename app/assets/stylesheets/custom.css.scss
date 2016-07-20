@@ -25,6 +25,14 @@ body {
   background-color: black;
 }
 
+.thumbnail img { 
+  height:150px;
+}
+
+.thumbnail p {
+  margin: 5px 0 0 5px;
+}
+
 /*flash*/
 .alert-error {
   background-color: #f2dede;
